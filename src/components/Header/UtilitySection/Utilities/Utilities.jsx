@@ -6,14 +6,9 @@ import DropDownMenu from "../../../ui/DropDownMenu/DropDownMenu";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
-import { useEffect, useState } from "react";
-import Cart from "../../../../pages/Cart/Cart";
-import { useCart } from "../../../../store/cartContext/cartContext";
 
 const Utilities = ({setShowNav}) => {
 	const { currentLocation, changeLocation } = useLocation();
-	const [showCart, setShowCart] = useState(false);
-	const { cartItems } = useCart();
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu
@@ -26,11 +21,10 @@ const Utilities = ({setShowNav}) => {
 			<Link className={styles["login"]} to="/login">
 				<img src={loginIcon}></img>
 			</Link>
-			<div className={styles["cart"]} onClick={() => setShowCart(!showCart)}>
+			<div className={styles["cart"]} onClick={() => {}}>
 				<img src={cartIcon}></img>
-				<span className={styles['cart-count']}>{cartItems.length}</span>
+				<span className={styles['cart-count']}>{0}</span>
 			</div>
-			{showCart && <Cart setShowCart={setShowCart} />} 
 		
 		</div>
 	);

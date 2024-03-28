@@ -7,11 +7,7 @@ import ServicePerks from "../../components/ServicePerks/ServicePerks";
 import BestProducts from "../../components/BestProducts/BestProducts";
 import {
 	Link,
-	Button,
 	Element,
-	Events,
-	animateScroll as scroll,
-	scrollSpy,
 } from "react-scroll";
 
 const Home = () => {
