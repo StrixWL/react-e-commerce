@@ -20,8 +20,10 @@ const Product = ({
 
 	return (
 		<Link to={"/product/" + id} className={styles["wrapper"]}>
-			<img className={styles['after-hover-image']} src={afterHoverImage} />
-			<img className={styles['before-hover-image']} src={beforeHoverImage} />
+			<div className={styles['product-imgs']}>
+				<img className={styles['after-hover-image']} src={afterHoverImage} />
+				<img className={styles['before-hover-image']} src={beforeHoverImage} />
+			</div>
 			<div className={styles["item-infos"]}>
 				<h1>{title}</h1>
 				<div className={styles["price-before"]}>{priceBefore ? (currentLocation ? currentLocation.split(' ')[1] : '€') : ""}{priceBefore}</div>{" "}

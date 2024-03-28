@@ -1,134 +1,150 @@
 .wrapper {
-    border: 1px black solid;
-    height: 35em;
-    display: block;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
+	border: 1px black solid;
+	height: 35em;
+	display: block;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+.product-imgs {
+	margin: 0 auto;
+	position: relative;
+	top: 1.5em;
+	height: 19em;
+	width: 18em;
+	display: flex;
+	justify-content: center;
 }
 
 .wrapper img {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 90%;
+	position: absolute;
+	height: 100%;
 }
 
 .item-infos {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 1.3em;
-    font-weight: 500;
-    width: 15em;
-    top: 16.6em;
-    /* top: 0; */
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 1.3em;
+	font-weight: 500;
+	width: 15em;
+	top: 16.6em;
+	/* top: 0; */
 }
 
 .item-infos h1 {
-    margin-bottom: .2em;
+	margin-bottom: 0.2em;
 }
 
 .price-before {
-    font-size: .8em;
-    font-weight: 400;
-    text-decoration: line-through;
-    left: 2em;
-    text-decoration-thickness: .2px;
-    display: inline;
+	font-size: 0.8em;
+	font-weight: 400;
+	text-decoration: line-through;
+	left: 2em;
+	text-decoration-thickness: 0.2px;
+	display: inline;
 }
 
 .price-after {
-    display: inline;
+	display: inline;
 }
 
 .wrapper span {
-    position: absolute;
+	position: absolute;
 }
 
 .wrapper a {
-    position: absolute;
+	position: absolute;
 }
 
 .buy-btn {
-    width: 80% !important;
-    height: 2em !important;
-    display: block;
-    position: absolute;
-    bottom: .8em;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 1.3em;
-    border: .1em solid black;
-    height: 3em;
-    width: 7em;
-    border-radius: 5em;
-    margin-top: 30px !important;
-
+	width: 80% !important;
+	height: 2em !important;
+	display: block;
+	position: absolute;
+	bottom: 0.8em;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 1.3em;
+	border: 0.1em solid black;
+	height: 3em;
+	width: 7em;
+	border-radius: 5em;
+	margin-top: 30px !important;
 }
 
 .wrapper:hover .before-hover-image {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .wrapper .after-hover-image {
-    visibility: hidden;
-    opacity: .7;
-    transition: opacity, transform .3s ease;
+	visibility: hidden;
+	opacity: 0.7;
+	transition: opacity, transform 0.3s ease;
 }
 
 .wrapper:hover .after-hover-image {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0) scale(1.1);
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1.1);
 }
 
-
 @media (max-width: 989px) {
-    .wrapper {
-        height: 53em;
+	.wrapper {
+		height: 53em;
+	}
+	.item-infos {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: 2.02em;
+		font-weight: 500;
+		width: 15em;
+		top: 16em;
+		/* top: 0; */
+	}
+	.buy-btn {
+		width: 10em;
+	}
+    .product-imgs {
+        height: 28em;
+        width: 30em;
     }
-    .item-infos {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        font-size: 2.02em;
-        font-weight: 500;
-        width: 15em;
-        top: 16em;
-        /* top: 0; */
-    }
-    .buy-btn {
-        width: 10em;
-    }
+    
 }
 
 @media (max-width: 749px) {
-    .wrapper {
-        height: 118em;
-    }
-    .item-infos {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        font-size: 4.3em;
-        font-weight: 500;
-        width: 15em;
-        top: 16em;
-        /* top: 0; */
-    }
-    .buy-btn {
-        width: 5em;
-        height: 5em;
-        display: block;
-        position: absolute;
-        bottom: .8em;
-        left: 50%;
-        transform: translate(-50%, 0);
-        font-size: 5em;
-        border: .1em solid black;
-        height: 3em;
-        width: 7em;
-        border-radius: 5em;
+	.wrapper {
+		height: 118em;
+	}
+	.item-infos {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: 4.3em;
+		font-weight: 500;
+		width: 15em;
+		top: 16em;
+		/* top: 0; */
+	}
+	.buy-btn {
+		width: 5em;
+		height: 5em;
+		display: block;
+		position: absolute;
+		bottom: 0.8em;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: 5em;
+		border: 0.1em solid black;
+		height: 3em;
+		width: 7em;
+		border-radius: 5em;
+	}
+    .product-imgs {
+        top: 8em;
+        height: 55em;
+        width: 50em;
     }
 }
