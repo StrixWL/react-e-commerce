@@ -1,0 +1,49 @@
+.quantity-input {
+    font-size: 10px;
+    width: 13em;
+    height: 4.5em;
+    border-radius: 5em;
+    position: relative;
+    overflow: hidden;
+    border: .1em solid rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+}
+
+.increment span, .decrement span {
+    font-size: 2.8em;
+    font-family: Arial;
+    color: rgba(0, 0, 0, .7);
+}
+
+.increment, .decrement {
+    /* background-color: aqua; */
+    height: 100%;
+    width: 4em;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.increment {
+    right: 0;
+}
+
+.decrement {
+    left: 0;
+}
+
+.increment span {
+    font-size: 2.6em;
+    position: relative;
+    top: .08em;
+}
+
+.input {
+    width: 2.7em;
+    text-align: center;
+    font-size: 2em;
+}
