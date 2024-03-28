@@ -1,3 +1,4 @@
+import { getProducts } from "../../services/products";
 import styles from "./BestProducts.module.css";
 import Product from "./Product/Product";
 import { useEffect, useState } from "react";
@@ -8,8 +9,7 @@ const BestProducts = () => {
 
 	useEffect(() => {
 		(async () => {
-			const data = await (await fetch('https://fakestoreapi.com/products')).json()
-			setItems(data)
+			setItems(await getProducts())
 		})()
 	}, [])
 
@@ -35,7 +35,7 @@ const BestProducts = () => {
 								afterHoverImage={item.image}
 								priceBefore={item.price}
 								priceAfter={item.price}
-								id={i}
+								id={item.id}
 							/>
 						</li>
 					);
