@@ -1,0 +1,16 @@
+.WideButton {
+    overflow: hidden;
+    max-width: 100%;
+    width: 400px;
+    display: inline-block;
+    height: 55px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1.3px var(--border-color),0 0 0 1px rgb(239, 240, 245);
+    transition: box-shadow .2s;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.WideButton:hover {
+    box-shadow: 0 0 0 2.3px var(--border-color),0 0 0 1px rgb(239, 240, 245);
+}
