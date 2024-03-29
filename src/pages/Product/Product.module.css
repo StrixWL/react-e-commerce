@@ -15,7 +15,7 @@
 }
 
 .product-imgs {
-    flex: 1;
+    width: 50%;
     /* background-color: aqua; */
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
 
 .product-details-wrapper {
     /* background-color: lightgreen; */
-    flex: 1;
+    width: 50%;
 }
 
 .product-details {
@@ -43,11 +43,26 @@
     font-family: Archivo;
 }
 
-.product-details p {
+.product-details span {
     font-size: 19px;
 }
 
 .product-details h2 {
     margin-top: 20px;
     font-size: 13px;
+}
+
+.wide-button {
+    margin: 5px 0;
+}
+
+.wide-button:first-of-type {
+    margin-top: 15px;
+}
+
+.product-details p {
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 20px;
+    color: rgb(110, 121, 136);
 }
