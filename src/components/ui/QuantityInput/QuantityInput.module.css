@@ -1,6 +1,7 @@
 .quantity-input {
     font-size: 10px;
     width: 13em;
+    max-width: 100%;
     height: 4.5em;
     border-radius: 5em;
     position: relative;
