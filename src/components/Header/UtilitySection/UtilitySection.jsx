@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SearchButton from "../../ui/SearchButton/SearchButton";
 import Utilities from "./Utilities/Utilities";
 import navbarIcon from '../../../assets/navbar.svg'
-import closeIcon from '../../../assets/close.svg'
+import closeIcon from '../../../assets/closew.svg'
 
 const UtilitySection = ({showNav, setShowNav}) => {
 	return (
