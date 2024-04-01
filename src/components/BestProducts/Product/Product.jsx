@@ -20,7 +20,7 @@ const Product = ({
 
 	return (
 		<Link to={"/product/" + id} className={styles["wrapper"]}>
-			<div className={styles['product-imgs']}>
+			<div className={styles['product-img']}>
 				<img className={styles['after-hover-image']} src={afterHoverImage} />
 				<img className={styles['before-hover-image']} src={beforeHoverImage} />
 			</div>

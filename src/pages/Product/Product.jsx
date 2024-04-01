@@ -19,8 +19,10 @@ const Product = () => {
 	return (
 		<div className={styles["wrapper"]}>
 			<div className={styles["product"]}>
-				<div className={styles["product-imgs"]}>
-					<img src={product.image} />
+				<div className={styles['product-imgs-wrapper']}>
+					<div className={styles["product-img"]}>
+						<img src={product.image} />
+					</div>
 				</div>
 				<div className={styles["product-details-wrapper"]}>
 					<div className={styles["product-details"]}>

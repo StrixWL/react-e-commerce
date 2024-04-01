@@ -7,7 +7,7 @@
 	overflow: hidden;
 }
 
-.product-imgs {
+.product-img {
 	margin: 0 auto;
 	position: relative;
 	top: 1.5em;
@@ -107,7 +107,7 @@
 	.buy-btn {
 		width: 10em;
 	}
-    .product-imgs {
+    .product-img {
         height: 28em;
         width: 30em;
     }
@@ -142,7 +142,7 @@
 		width: 7em;
 		border-radius: 5em;
 	}
-    .product-imgs {
+    .product-img {
         top: 8em;
         height: 55em;
         width: 50em;
