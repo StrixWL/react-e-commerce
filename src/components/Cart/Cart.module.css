@@ -11,9 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-left: 1px solid rgba(0, 0, 0, .4);
-
 }
 
 .overlay {
@@ -30,27 +30,9 @@
 .cart {
     width: 91%;
     min-width: 367px;
-    height: 95%;
+    height: 100%;
     position: relative;
     /* background-color: lightpink; */
-}
-
-.cart h1 {
-    font-size: 26px;
-    letter-spacing: .8px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    line-height: 22px;
-    font-family: Archivo;
-}
-
-.close-btn {
-    position: absolute;
-    right: 0;
-    width: 25px;
-}
-
-.close-btn:hover {
-    transform: scale(1.1);
+    display: flex;
+    flex-direction: column;
 }

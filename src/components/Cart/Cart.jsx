@@ -9,12 +9,7 @@ import CartCheckout from "./CartCheckout/CartCheckout";
 const Cart = () => {
 	const { showCart, toggleCart } = useContext(CartContext);
 	return (
-		<div
-			style={{
-				display: showCart ? "block" : "block",
-			}}
-			className={styles["wrapper"]}
-		>
+		<div className={styles["wrapper"]}>
 			<div
 				style={{
 					width: showCart ? "404px" : "0",
@@ -27,13 +22,9 @@ const Cart = () => {
 					<CartCheckout />
 				</div>
 			</div>
-			<div
-                onClick={toggleCart}
-				style={{
-					display: showCart ? "block" : "none",
-				}}
-				className={styles["overlay"]}
-			></div>
+			{showCart && (
+				<div onClick={toggleCart} className={styles["overlay"]}></div>
+			)}
 		</div>
 	);
 };
