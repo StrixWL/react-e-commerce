@@ -3,6 +3,7 @@ import styles from "./Cart.module.css";
 import closeIcon from "../../assets/closeb.svg";
 import { CartContext } from "../../context/CartContext";
 import CartHeader from "./CartHeader/CartHeader";
+import CartList from "./CartList/CartList";
 
 const Cart = () => {
 	const { showCart, toggleCart } = useContext(CartContext);
@@ -21,6 +22,7 @@ const Cart = () => {
 			>
 				<div className={styles["cart"]}>
 					<CartHeader toggleCart={toggleCart} />
+					<CartList />
 				</div>
 			</div>
 			<div
