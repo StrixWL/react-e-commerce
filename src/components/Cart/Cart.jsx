@@ -4,6 +4,7 @@ import closeIcon from "../../assets/closeb.svg";
 import { CartContext } from "../../context/CartContext";
 import CartHeader from "./CartHeader/CartHeader";
 import CartList from "./CartList/CartList";
+import CartCheckout from "./CartCheckout/CartCheckout";
 
 const Cart = () => {
 	const { showCart, toggleCart } = useContext(CartContext);
@@ -23,6 +24,7 @@ const Cart = () => {
 				<div className={styles["cart"]}>
 					<CartHeader toggleCart={toggleCart} />
 					<CartList />
+					<CartCheckout />
 				</div>
 			</div>
 			<div

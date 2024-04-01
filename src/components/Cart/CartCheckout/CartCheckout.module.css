@@ -1,0 +1,23 @@
+.cart-checkout {
+    min-height: 137px;
+    border-top: 1px solid rgba(0, 0, 0, .16);
+}
+
+.cart-checkout p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+    margin-bottom: 10px;
+}
+
+.cart-subtotal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.cart-subtotal h2 {
+    font-weight: 600;
+}
