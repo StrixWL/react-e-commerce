@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import EmailSub from "../../components/EmailSub/EmailSub";
 import Aos from "aos";
 import 'aos/dist/aos.css'
+import Cart from "../../components/Cart/Cart";
 
 const Layout = () => {
 	const location = useLocation()
@@ -17,6 +18,7 @@ const Layout = () => {
 	return (
 		<div className={styles.layout}>
 			<Header />
+			<Cart />
 			<div className={styles['wrapper']}>
 				<Outlet />
 			</div>
