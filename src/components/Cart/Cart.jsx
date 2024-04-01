@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import styles from "./Cart.module.css";
 import closeIcon from "../../assets/closeb.svg";
 import { CartContext } from "../../context/CartContext";
+import CartHeader from "./CartHeader/CartHeader";
 
 const Cart = () => {
 	const { showCart, toggleCart } = useContext(CartContext);
@@ -19,13 +20,7 @@ const Cart = () => {
 				className={styles["cart-wrapper"]}
 			>
 				<div className={styles["cart"]}>
-					<button
-						onClick={toggleCart}
-						className={styles["close-btn"]}
-					>
-						<img src={closeIcon} />
-					</button>
-					<h1>Your cart</h1>
+					<CartHeader toggleCart={toggleCart} />
 				</div>
 			</div>
 			<div
