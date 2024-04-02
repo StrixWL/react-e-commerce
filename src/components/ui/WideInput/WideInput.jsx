@@ -1,10 +1,12 @@
 import styles from "./WideInput.module.css";
 
-const WideInput = ({onSubmit, buttonIcon, className, placeholder, color}) => {
+const WideInput = ({onSubmit, buttonIcon, className, placeholder, color, required}) => {
     className = className || ''
 	onSubmit = onSubmit || (() => {})
 	placeholder = placeholder || "Placeholder"
 	color = color || '255, 255, 255'
+	if (required === undefined)
+		required = true
 	return (
 		<form 
 		style={{
@@ -17,7 +19,7 @@ const WideInput = ({onSubmit, buttonIcon, className, placeholder, color}) => {
 					id="email"
 					name="email"
 					placeholder={placeholder}
-					required
+					required={required}
 				/>
 				<span>{placeholder}</span>
 			</label>
