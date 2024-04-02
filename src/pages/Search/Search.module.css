@@ -12,3 +12,18 @@
 .input {
     width: 650px;
 }
+
+.category-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.category {
+    width: 80%;
+    max-width: 1149px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+}
