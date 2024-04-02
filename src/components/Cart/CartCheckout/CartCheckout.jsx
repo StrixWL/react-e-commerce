@@ -9,7 +9,7 @@ const CartCheckout = () => {
 				<span>$112.00 USD</span>
 			</div>
 			<p>Taxes and shipping calculated at checkout</p>
-			<WideButton text="Check out" bgColor="white" textColor="black" />
+			<WideButton className={styles['checkout-btn']} text="Check out" bgColor="white" textColor="black" />
 		</div>
 	);
 };

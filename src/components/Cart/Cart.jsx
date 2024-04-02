@@ -11,10 +11,10 @@ const Cart = () => {
 	return (
 		<div className={styles["wrapper"]}>
 			<div
-				style={{
-					width: showCart ? "404px" : "0",
-				}}
-				className={styles["cart-wrapper"]}
+				className={
+					styles["cart-wrapper"] +
+					(showCart ? " " + styles["active"] : "")
+				}
 			>
 				<div className={styles["cart"]}>
 					<CartHeader toggleCart={toggleCart} />
