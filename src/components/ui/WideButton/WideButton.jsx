@@ -14,7 +14,7 @@ const WideButton = ({ className, borderColor, textColor, bgColor, text }) => {
 			}}
 			className={styles["WideButton"] + " " + className}
 		>
-			{text}
+			<span>{text}</span>
 		</button>
 	);
 };
