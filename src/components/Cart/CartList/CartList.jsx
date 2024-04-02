@@ -4,8 +4,8 @@ import CartListElem from './CartListElem/CartListElem';
 const CartList = () => {
     return (
         <ul className={styles['cart-list']}>
-            {tmp.map(item => {
-                return <CartListElem item={item} />
+            {tmp.map((item, i) => {
+                return <CartListElem key={i} item={item} />
             })}
         </ul>
     )

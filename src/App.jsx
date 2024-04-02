@@ -5,6 +5,7 @@ import NoPage from "./pages/NoPage/NoPage";
 import Product from "./pages/Product/Product";
 import "./App.css";
 import { CartProvider } from "./context/CartContext";
+import Search from "./pages/Search/Search";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="product/:productID" element={<Product />} />
+            <Route path="search/" element={<Search />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
