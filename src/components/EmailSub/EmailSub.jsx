@@ -9,6 +9,7 @@ import validLogo from "../../assets/valid.svg";
 import errorLogo from "../../assets/error.svg";
 import spinner from "../../assets/spinner.svg";
 import { useState } from "react";
+import WideInput from "../ui/WideInput/WideInput";
 
 // 0 none
 // 1 submitting
@@ -38,24 +39,7 @@ const EmailSub = () => {
 						Be the first to know about new collections and exclusive
 						offers.
 					</p>
-					<form
-						onSubmit={submitMail}
-						className={styles["email-sub-form"]}
-					>
-						<label htmlFor="email">
-							<input
-								type="text"
-								id="email"
-								name="email"
-								placeholder="Email"
-								required
-							/>
-							<span>Email</span>
-						</label>
-						<button type="submit">
-							<img src={submitIcon}></img>
-						</button>
-					</form>
+					<WideInput onSubmit={submitMail} buttonIcon={submitIcon} placeholder="Email"/>
 					<div
 						style={{
 							display: state ? "flex" : "none",
