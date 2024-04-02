@@ -1,9 +1,9 @@
 import { getProducts } from "../../services/products";
-import styles from "./BestProducts.module.css";
+import styles from "./Products.module.css";
 import Product from "./Product/Product";
 import { useEffect, useState } from "react";
 
-const BestProducts = () => {
+const Products = () => {
 	const [columnsCount, setColumnsCount] = useState(-1);
 	const [items, setItems] = useState([]);
 
@@ -45,4 +45,4 @@ const BestProducts = () => {
 	);
 };
 
-export default BestProducts;
+export default Products;

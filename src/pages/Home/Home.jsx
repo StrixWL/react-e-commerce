@@ -4,7 +4,7 @@ import ScrollDown1 from "../../components/ui/ScrollDown1/ScrollDown1";
 import ScrollDown2 from "../../components/ui/ScrollDown2/ScrollDown2";
 import ServiceShowCase from "../../components/ServiceShowCase/ServiceShowCase";
 import ServicePerks from "../../components/ServicePerks/ServicePerks";
-import BestProducts from "../../components/BestProducts/BestProducts";
+import Products from "../../components/Products/Products";
 import {
 	Link,
 	Element,
@@ -35,7 +35,7 @@ const Home = () => {
 					Best products
 				</h1>
 			</Element>
-			<BestProducts />
+			<Products />
 			<ServicePerks />
 			<ServiceShowCase />
 		</main>
