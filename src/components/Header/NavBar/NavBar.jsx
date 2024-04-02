@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import NavBarLink from "./NavBarLink/NavBarLink";
-import DropDownMenu from "../../ui/DropDownMenu/DropDownMenu";
+import DropDownMenu1 from "../../ui/DropDownMenu1/DropDownMenu1";
 import { locations } from "../../../data/locations";
 import useLocationHook from "../../../hooks/useLocation";
 import { useLocation } from "react-router-dom";
@@ -27,7 +27,7 @@ const NavBar = ({showNav, setShowNav}) => {
                         Log in
                     </Link>
                 </div>
-                <DropDownMenu
+                <DropDownMenu1
                     items={locations}
                     current={currentLocation}
                     onChange={changeLocation}

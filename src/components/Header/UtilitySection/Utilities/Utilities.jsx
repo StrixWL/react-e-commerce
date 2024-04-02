@@ -2,7 +2,7 @@ import styles from "./Utilities.module.css";
 import { Link } from "react-router-dom";
 import loginIcon from "../../../../assets/login.svg";
 import cartIcon from "../../../../assets/cart.svg";
-import DropDownMenu from "../../../ui/DropDownMenu/DropDownMenu";
+import DropDownMenu1 from "../../../ui/DropDownMenu1/DropDownMenu1";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
@@ -14,7 +14,7 @@ const Utilities = ({ setShowNav }) => {
 	const { toggleCart } = useContext(CartContext);
 	return (
 		<div className={styles["utilities"]}>
-			<DropDownMenu
+			<DropDownMenu1
 				items={locations}
 				current={currentLocation}
 				onChange={changeLocation}

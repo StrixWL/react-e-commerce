@@ -1,0 +1,10 @@
+.dropdown-menu  {
+    width: 154px;
+    cursor: pointer;
+    height: 45px;
+    border: 1px solid #aaa;
+}
+
+.dropdown-menu:focus {
+    outline: none;
+}

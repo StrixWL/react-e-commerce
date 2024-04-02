@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import { locations } from "../../data/locations";
 import useLocation from "../../hooks/useLocation";
-import DropDownMenu from "../ui/DropDownMenu/DropDownMenu";
+import DropDownMenu1 from "../ui/DropDownMenu1/DropDownMenu1";
 import aExpressIcon from '../../assets/americanExpress.svg'
 import appleIcon from '../../assets/apple.svg'
 import googleIcon from '../../assets/google.svg'
@@ -22,7 +22,7 @@ const Footer = () => {
 					<div className={styles["country-region-items"]}>
 						<h2>Country/region</h2>
 						<div className={styles["dropdown-menu-wrapper"]}>
-							<DropDownMenu
+							<DropDownMenu1
 								items={locations}
 								current={currentLocation}
 								onChange={changeLocation}
