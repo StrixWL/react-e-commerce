@@ -6,12 +6,12 @@ import DropDownMenu1 from "../../../ui/DropDownMenu1/DropDownMenu1";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
-import { CartContext } from "../../../../context/CartContext";
+import { ToggleCartContext } from "../../../../context/CartContext";
 import { useContext } from "react";
 
 const Utilities = ({ setShowNav }) => {
 	const { currentLocation, changeLocation } = useLocation();
-	const { toggleCart } = useContext(CartContext);
+	const { toggleCart } = useContext(ToggleCartContext);
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu1

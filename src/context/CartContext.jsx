@@ -1,13 +1,16 @@
-import { createContext, useState } from "react";
+import { CartItemsContext, CartItemsProvider } from "./Cart/CartItemsContext";
+import { ToggleCartContext, ToggleCartProvider } from "./Cart/ToggleCartContext";
 
-export const CartContext = createContext()
+const CartProvider = ({ children }) => {
+	return (
+		<ToggleCartProvider>
+			<CartItemsProvider>{ children }</CartItemsProvider>
+		</ToggleCartProvider>
+	);
+};
 
-export const CartProvider = ({children}) => {
-    const [showCart, setShowCart] = useState(false)
-    const toggleCart = () => setShowCart(!showCart)
-    return (
-        <CartContext.Provider value={{showCart, toggleCart}}>
-            {children}
-        </CartContext.Provider>
-    )
+export {
+    CartItemsContext,
+    ToggleCartContext,
+    CartProvider
 }
