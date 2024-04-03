@@ -1,13 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./Cart.module.css";
 import closeIcon from "../../assets/closeb.svg";
-import { CartContext } from "../../context/CartContext";
+import { ToggleCartContext } from "../../context/CartContext";
 import CartHeader from "./CartHeader/CartHeader";
 import CartList from "./CartList/CartList";
 import CartCheckout from "./CartCheckout/CartCheckout";
 
 const Cart = () => {
-	const { showCart, toggleCart } = useContext(CartContext);
+	const { showCart, toggleCart } = useContext(ToggleCartContext);
+	useEffect(() => {
+		console.log("Cart")
+	})
 	return (
 		<div className={styles["wrapper"]}>
 			<div

@@ -1,8 +1,19 @@
 import QuantityInput from '../../../ui/QuantityInput/QuantityInput';
 import styles from './CartListElem.module.css';
 import deleteIcon from '../../../../assets/delete.svg'
+import { useEffect, useState, useContext } from 'react';
+import { CartItemsContext } from '../../../../context/CartContext';
 
-const CartListElem = ({item}) => {
+const CartListElem = ({item, amount}) => {
+	const { dispatchCart } = useContext(CartItemsContext);
+    const setQuantity = (amount) => {
+        dispatchCart({
+            id: item.id,
+            type: "UPDATE",
+            details: item,
+            amount,
+        });
+    }
     return (
         <li className={styles['cart-list-elem']}>
             <div className={styles['product-img']}>
@@ -15,7 +26,7 @@ const CartListElem = ({item}) => {
                     <span>$112.00</span>
                 </div>
                 <div className={styles['quantity']}>
-                    <QuantityInput className={styles['quantity-input']} />
+                    <QuantityInput setQuantity={setQuantity} className={styles['quantity-input']} defaultValue={amount}/>
                     <button className={styles['delete-btn']}>
                         <img src={deleteIcon} />
                     </button>
