@@ -3,8 +3,10 @@ import styles from './CartListElem.module.css';
 import deleteIcon from '../../../../assets/delete.svg'
 import { useContext } from 'react';
 import { CartItemsContext } from '../../../../context/CartContext';
+import useLocation from '../../../../hooks/useLocation';
 
 const CartListElem = ({item, amount}) => {
+	const location = useLocation()
 	const { dispatchCart } = useContext(CartItemsContext);
     const setQuantity = (amount) => {
         dispatchCart({
@@ -29,7 +31,7 @@ const CartListElem = ({item, amount}) => {
                 {/* <h2>White Gold Plated Princess</h2> */}
                 <div className={styles['title-and-price']}>
                     <h2>{item.title}</h2>
-                    <span>${Math.floor(item.price * amount * 100) / 100}</span>
+                    <span>{location.currentLocation.split(' ')[1]}{Math.floor(item.price * amount * 100) / 100}</span>
                 </div>
                 <div className={styles['quantity']}>
                     <QuantityInput setQuantity={setQuantity} className={styles['quantity-input']} defaultValue={amount}/>
