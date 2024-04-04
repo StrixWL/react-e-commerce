@@ -13,6 +13,10 @@
 	border-radius: 20px;
 }
 
+.loader {
+	width: 100px;
+}
+
 @media screen and (max-width: 749px) {
 	.product {
 		flex-direction: column;
