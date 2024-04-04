@@ -12,7 +12,7 @@ const CartSubTotal = () => {
 	return (
 		<div className={styles["cart-subtotal"]}>
 			<h2>Subtotal</h2>
-			<span>{location.currentLocation.split(' ')[1]}{subtotal} {location.currentLocation.split(' ')[0]}</span>
+			<span>{location.currentLocation && location.currentLocation.split(' ')[1]}{subtotal} {location.currentLocation && location.currentLocation.split(' ')[0]}</span>
 		</div>
 	);
 };
