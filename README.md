@@ -19,6 +19,7 @@ deeper understanding of reactjs including:
 - Search: user can search for products by name and filter by category.
 - Product details: user can click on a product to see a detailed view.
 - Homepage: cool animations, products list, and showcasing the service.
+- Currency: user can select a currency based on his location.
 - Shopping cart: user can add products to shopping cart, view, delete and manage selections.
 
 <sup><sub>built @ SQLI</sub></sup>
