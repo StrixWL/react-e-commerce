@@ -14,6 +14,12 @@ const CartListElem = ({item, amount}) => {
             amount,
         });
     }
+    const deleteSelf = () => {
+        dispatchCart({
+            id: item.id,
+            type: "DELETE",
+        });
+    }
     return (
         <li className={styles['cart-list-elem']}>
             <div className={styles['product-img']}>
@@ -27,7 +33,7 @@ const CartListElem = ({item, amount}) => {
                 </div>
                 <div className={styles['quantity']}>
                     <QuantityInput setQuantity={setQuantity} className={styles['quantity-input']} defaultValue={amount}/>
-                    <button className={styles['delete-btn']}>
+                    <button onClick={deleteSelf} className={styles['delete-btn']}>
                         <img src={deleteIcon} />
                     </button>
                 </div>
