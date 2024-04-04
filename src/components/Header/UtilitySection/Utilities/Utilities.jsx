@@ -7,11 +7,13 @@ import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
 import { ToggleCartContext } from "../../../../context/CartContext";
+import { CartItemsContext } from "../../../../context/CartContext";
 import { useContext } from "react";
 
 const Utilities = ({ setShowNav }) => {
 	const { currentLocation, changeLocation } = useLocation();
 	const { toggleCart } = useContext(ToggleCartContext);
+	const { cartItems } = useContext(CartItemsContext);
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu1
@@ -29,7 +31,7 @@ const Utilities = ({ setShowNav }) => {
 			</Link>
 			<div className={styles["cart"]} onClick={toggleCart}>
 				<img src={cartIcon}></img>
-				<span className={styles["cart-count"]}>{0}</span>
+				{Object.keys(cartItems).length && <span className={styles["cart-count"]}>{Object.keys(cartItems).length}</span>}
 			</div>
 		</div>
 	);
