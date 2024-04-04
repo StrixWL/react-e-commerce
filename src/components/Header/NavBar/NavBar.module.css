@@ -47,7 +47,7 @@
         flex-direction: column;
         gap: 1px;
         margin-bottom: 30px;
-        height: calc(100vh - 76px - 142px - 60px);
+        height: calc(100vh - 76px - 142px - 61px);
         min-height: 356px;
     }
     .nav-items li {
@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 749px) {
     .nav-items {
-        height: calc(100vh - 76px - 185px - 60px);
+        height: calc(100vh - 76px - 185px - 61px);
         min-height: 356px;
     }
     .nav-bar.active {
