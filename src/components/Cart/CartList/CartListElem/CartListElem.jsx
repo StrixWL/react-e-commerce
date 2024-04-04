@@ -1,7 +1,7 @@
 import QuantityInput from '../../../ui/QuantityInput/QuantityInput';
 import styles from './CartListElem.module.css';
 import deleteIcon from '../../../../assets/delete.svg'
-import { useEffect, useState, useContext } from 'react';
+import { useContext } from 'react';
 import { CartItemsContext } from '../../../../context/CartContext';
 
 const CartListElem = ({item, amount}) => {
@@ -29,7 +29,7 @@ const CartListElem = ({item, amount}) => {
                 {/* <h2>White Gold Plated Princess</h2> */}
                 <div className={styles['title-and-price']}>
                     <h2>{item.title}</h2>
-                    <span>$112.00</span>
+                    <span>${Math.floor(item.price * amount * 100) / 100}</span>
                 </div>
                 <div className={styles['quantity']}>
                     <QuantityInput setQuantity={setQuantity} className={styles['quantity-input']} defaultValue={amount}/>

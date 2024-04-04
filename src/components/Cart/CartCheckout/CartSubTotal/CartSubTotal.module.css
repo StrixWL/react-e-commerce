@@ -1,0 +1,21 @@
+
+.cart-subtotal {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	font-size: 20px;
+	margin: 5px 0;
+}
+
+.cart-subtotal h2 {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 399px) {
+	.cart-subtotal {
+		font-size: 3em;
+		margin: 0.75em 0;
+	}
+
+}

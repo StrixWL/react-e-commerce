@@ -1,14 +1,12 @@
 import { memo } from "react";
 import WideButton from "../../ui/WideButton/WideButton";
 import styles from "./CartCheckout.module.css";
+import CartSubTotal from "./CartSubTotal/CartSubTotal";
 
 const CartCheckout = memo(() => {
 	return (
 		<div className={styles["cart-checkout"]}>
-			<div className={styles["cart-subtotal"]}>
-				<h2>Subtotal</h2>
-				<span>$112.00 USD</span>
-			</div>
+			<CartSubTotal />
 			<p>Taxes and shipping calculated at checkout</p>
 			<WideButton className={styles['checkout-btn']} text="Check out" bgColor="white" textColor="black" />
 		</div>
