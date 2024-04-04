@@ -2,15 +2,17 @@ import { getProducts } from "../../services/products";
 import styles from "./Products.module.css";
 import Product from "./Product/Product";
 import { useEffect, useState } from "react";
+import loader from '../../assets/loader.svg'
 
 const Products = ({category, keyWords}) => {
 	const [columnsCount, setColumnsCount] = useState(-1);
 	const [items, setItems] = useState([]);
-
+	const [loading, setLoading] = useState(true)
 	useEffect(() => {
-		(async () => {
-			setItems(await getProducts())
-		})()
+		getProducts().then(data => {
+			setItems(data)
+			setLoading(false)
+		})
 	}, [])
 	useEffect(() => {
 		if (window.innerWidth > 989) setColumnsCount(3);
@@ -28,7 +30,9 @@ const Products = ({category, keyWords}) => {
 	}
 	return (
 		<div className={styles["wrapper"]}>
-			<ul className={styles["items"]}>
+			<ul style={{
+				display: loading ? 'none' : 'grid'
+			}} className={styles["items"]}>
 				{items.filter(filterItem).map((item, i) => {
 					return (
 						<li
@@ -49,6 +53,7 @@ const Products = ({category, keyWords}) => {
 					);
 				})}
 			</ul>
+			{loading && <img src={loader} className={styles['loader']} />}
 		</div>
 	);
 };
