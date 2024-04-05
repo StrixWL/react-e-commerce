@@ -45,7 +45,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className={styles["footer-credit"]}>
-					<p>Done by Brahim, Oualid, Asmaa @ SQLI Oujda ッ</p>
+					<p>Done by Brahim @ SQLI ッ</p>
 				</div>
 			</div>
 		</footer>
